@@ -36,11 +36,15 @@
 
       $("#button_toggle_roundedges").click(function() {
         $(".box").each(function() {
+          /* Long Solution
           if ($(this).hasClass("round-edge")) {
             $(this).removeClass("round-edge");
           } else {
             $(this).addClass("round-edge");
-          }
+          }*/
+
+          /* Short Solution */
+          $(this).toggleClass("round-edge");
         });
       });
 
