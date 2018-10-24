@@ -36,6 +36,7 @@
 
       $("#button_toggle_roundedges").click(function() {
         $(".box").each(function() {
+
           /* Long Solution
           if ($(this).hasClass("round-edge")) {
             $(this).removeClass("round-edge");
@@ -45,10 +46,24 @@
 
           /* Short Solution */
           $(this).toggleClass("round-edge");
+
         });
       });
 
-      /* Step 4: Adding new elements */
+      $("#button_add_box").click(function() {
+        /* Create Div element */
+        var new_box = document.createElement("div");
+        /* Calculate next id */
+        var existingBoxes = $(".box").length;
+        var new_id = existingBoxes + 1;
+        /* Add id and classes to the new Div */
+        $(new_box).attr("id", "box" + new_id);
+        $(new_box).addClass("box");
+        $(new_box).addClass("outlined");
+        /* Add new Div to #boxes Div */
+        $("#boxes").append(new_box);
+
+      });
 
     });
     </script>
