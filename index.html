@@ -34,7 +34,15 @@
         });
       });
 
-      /* Step 3: Using jQuery's .addClass()/.removeClass()/.toggleClass() */
+      $("#button_toggle_roundedges").click(function() {
+        $(".box").each(function() {
+          if ($(this).hasClass("round-edge")) {
+            $(this).removeClass("round-edge");
+          } else {
+            $(this).addClass("round-edge");
+          }
+        });
+      });
 
       /* Step 4: Adding new elements */
 
